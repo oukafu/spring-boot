@@ -1287,6 +1287,9 @@ public class SpringApplication {
 	 * @param args the application arguments (usually passed from a Java main method)
 	 * @return the running {@link ApplicationContext}
 	 */
+	/**
+	 * 用来启动一个spring应用程序的入口方法，会读取指定的 primarySource类中的配置。
+	 */
 	public static ConfigurableApplicationContext run(Class<?> primarySource, String... args) {
 		return run(new Class<?>[] { primarySource }, args);
 	}
