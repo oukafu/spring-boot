@@ -1,0 +1,43 @@
+plugins {
+//	id 'org.springframework.boot' version '2.3.4.RELEASE'
+//	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+//	id 'org.springframework.boot'
+//	id 'io.spring.dependency-management'
+	id 'war'
+	id "org.springframework.boot.conventions"
+}
+
+group = 'com.fuwh'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+//repositories {
+//	mavenCentral()
+//}
+
+description = "Spring Boot web JSP smoke test"
+
+configurations {
+	providedRuntime {
+		extendsFrom dependencyManagement
+	}
+}
+
+
+
+dependencies {
+//	implementation(project(":spring-boot-project:spring-boot"))
+//	implementation(project(":spring-boot-project:spring-boot-autoconfigure"))
+	implementation(project(":spring-boot-project:spring-boot-starters:spring-boot-starter-web"))
+
+	providedRuntime(project(":spring-boot-project:spring-boot-starters:spring-boot-starter-tomcat"))
+
+//	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+//		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+//	}
+}
+
+//test {
+//	useJUnitPlatform()
+//}
